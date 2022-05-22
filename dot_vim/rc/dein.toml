@@ -1,0 +1,84 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'itchyny/landscape.vim'
+
+[[plugins]]
+repo = 'itchyny/vim-haskell-indent'
+
+[[plugins]]
+repo = 'kana/vim-filetype-haskell'
+
+[[plugins]]
+repo = 'vim-jp/cpp-vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'vim-jp/autofmt'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo = 'thinca/vim-themis'
+
+
+[[plugins]]
+repo = 'ujihisa/neco-look'
+[[plugins]]
+repo = 'fuenor/im_control.vim'
+hook_add='''
+let IM_CtrlMode=1
+inoremap <silent> <C-k> <C-r>=IMState('FixMode')<CR>
+function! IMCtrl(cmd)
+    let cmd=a:cmd
+    if cmd=='On'
+        let res=system('ibus engine "mozc-jp"')
+    elseif cmd=='Off'
+        let res=system('ibus engine "xkb:jp::jpn"')
+    endif
+    return ''
+endfunction
+set timeout timeoutlen=3000 ttimeoutlen=100
+'''
+[[plugins]]
+repo = 'morhetz/gruvbox'
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+let g:ale_lint_on_save=1
+let g:ale_lint_on_text_changed='normal'
+'''
+#colorschemes
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+hook_source='''
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+set background=dark
+colorscheme hybrid
+'''
+[[plugins]]
+repo = 'sainnhe/vim-color-ice-age'
