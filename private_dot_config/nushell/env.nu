@@ -55,5 +55,12 @@ let-env NU_PLUGIN_DIRS = [
 ]
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-# let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
+let-env PATH = ($env.PATH | split row (char esep) 
+    | prepend $'($env.HOME)/.opam/4.06.1/bin' 
+    | prepend $'($env.HOME)/.npm-packages/bin' 
+    | prepend $'($env.HOME)/.cargo/bin' 
+    | prepend $'($env.HOME)/Program/Security/checksec.sh/' 
+    | prepend $'($env.HOME)/.local/bin' 
+    | prepend $'($env.HOME)/Program/Browser/chromium/depot_tools' 
+    | prepend $'($env.HOME)/.gem/ruby/2.7.0/bin' )
 zoxide init nushell --hook prompt | save ~/.zoxide.nu
