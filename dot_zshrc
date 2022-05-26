@@ -40,7 +40,7 @@ zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'ex=32'
 # End of lines added by compinstall
 JAVA_HOME="/usr/lib/jvm/default-java/"
 
-PATH=~/.cargo/bin:~/.local/bin:~/cdtdebugger:$PATH:
+PATH=~/.local/bin:~/cdtdebugger:$PATH:
 export PATH
 export JAVA_HOME
 setopt nonomatch
@@ -54,7 +54,6 @@ alias ipy3=ipython3
 alias msbuild="dotnet build"
 alias zshup="export PATH=\$PATH"
 export XDG_CONFIG_HOME=~/.config
-export PATH=~/node/bin/:$PATH:
 #eval "$(stack --bash-completion-script stack)"
 
 #if [ -n "$SSH_CONNECTION" ] ; then
@@ -74,12 +73,7 @@ export PATH=~/node/bin/:$PATH:
 
 bindkey -v
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-umask 022
+umask 007
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

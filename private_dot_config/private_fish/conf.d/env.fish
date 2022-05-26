@@ -1,0 +1,1 @@
+set PATH $HOME/.cargo/bin $HOME/.opam/4.06.1/bin $HOME/.npm-packages/bin $HOME/Program/Security/checksec.sh/ $HOME/.local/bin $HOME/Program/Browser/chromium/depot_tools $HOME/.gem/ruby/2.7.0/bin $PATH
